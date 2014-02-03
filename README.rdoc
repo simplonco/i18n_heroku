@@ -1,22 +1,28 @@
 == README
 
-Steps to get the application up and running:
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
+Things you may want to cover:
 
+* Ruby version
 
-Ruby on Rails App setup with Heroku 
-
-
-
+* System dependencies
 
 * Configuration
 
-1. Heroku uses the PostgreSQL 
- we need to add the pg gem in the production environment to allow Rails to talk to Postgres:
+* Database creation
 
-group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
-end
+* Database initialization
 
-bundle install --without production
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
