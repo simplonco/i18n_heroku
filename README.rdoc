@@ -1,28 +1,79 @@
-== README
+README
+=========
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##[Ruby on Rails App on Heroku](https://i18n-heroku-app.herokuapp.com/)
+---
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+###Steps to get the application up and running:
+* Create an app
+```
+rails new "name_the_app"
+cd "name_the_app"
+```
+* Generate a controller
+```
+rails generate controller welcome_index
+```
+* Edit your index in  app/views/welcome/index.html.erb
+* Edit config/routes.rb: 
+```
+root 'welcome#index'
+```
+* Launch the app
+```
+rails server
+```
+
+---
+
+### Setup your app for Heroku
+---
+Use the PostgreSQL 
+(we need to add the pg gem in the production environment to allow Rails to talk to Postgres)
+* Edit your Gemfile
+
+```
+group :development do
+gem 'sqlite3'
+end 
+
+group :production do
+gem 'pg', '0.15.1'
+gem 'rails_12factor', '0.0.2'
+end}
+
+bundle install
+```
+* Install [Heroku Toolbelt](https://toolbelt.heroku.com/)
+
+
+```
+heroku login
+cd ~/rails_projects/name_of_app
+$ heroku create
+```
+If you have any problems with the public key, try:
+
+```
+heroku keys:add ~/.ssh/id_rsa.pub
+```
+
+###Heroku Deployment
+
+```
+git push heroku master
+```
+
+### Configuration
+```
+heroku open
+heroku rename "name_your_app_on_heroku"
+```
+
+**To read more**
+
+[Heroku Dev](https://devcenter.heroku.com)
+
+
+    
