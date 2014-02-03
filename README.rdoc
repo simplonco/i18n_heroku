@@ -6,24 +6,17 @@ Steps to get the application up and running:
 
 Ruby on Rails App setup with Heroku 
 
+
+
+
 * Configuration
 
 1. Heroku uses the PostgreSQL 
  we need to add the pg gem in the production environment to allow Rails to talk to Postgres:
 
-
-
-* Deployment instructions
-
-
-Gemfile
-group :development do
-  gem 'heroku-rails'
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
 end
 
-
-Configure
-
-In config/heroku.yml you will need add the Heroku apps that you would like to attach to this project. You can generate this file and edit it by running:
-
-rails generate heroku:config
+bundle install --without production
