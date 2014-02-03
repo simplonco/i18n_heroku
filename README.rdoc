@@ -1,0 +1,14 @@
+== README
+
+Steps to get the application up and running:
+
+
+
+
+* Ruby on Rails App setup with heroku 
+
+* Configuration
+
+* Deployment instructions
+
+
