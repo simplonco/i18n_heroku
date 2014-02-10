@@ -13,7 +13,7 @@ cd "name_the_app"
 ```
 * Generate a controller
 ```
-rails generate controller welcome_index
+rails generate controller welcome index
 ```
 * Edit your index in  app/views/welcome/index.html.erb
 * Edit config/routes.rb: 
