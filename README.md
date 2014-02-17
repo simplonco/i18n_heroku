@@ -3,7 +3,7 @@ La gem i18n permet l'internationalisation d'un site internet. Par internationali
 Je vais expliquer au sein de ce readme la manière dont j'ai procédé.<br>
 Les ressources que j'ai utilisé pour arriver à ce but sont:<br>
 
-Rails 4 begin <br>
+Rails 4 begin<br> 
 Railscast<br>
 RailsGuides<br>
 
@@ -14,7 +14,7 @@ RailsGuides<br>
 $ rails new blog
 
 ```
-<br>
+
 2.Creation du controller et une action index
 
 ```
@@ -36,13 +36,12 @@ gem 'i18n'
 $ bundle install ; bundle update
 ```
 
-<br>
 
 4.Mise de la root de base a Bonjour index
 
-<br>
+
 >config/routes.rb
-<br>
+
 ```
 root "bonjour#index"
 
@@ -53,8 +52,8 @@ root "bonjour#index"
 >config/locales
 
 ```
-touch config/locales/fr.yml #Creation traduction francais
-touch config/locales/br.yml #Creation traduction Brezilien
+$ touch config/locales/fr.yml #Creation traduction francais
+$ touch config/locales/br.yml #Creation traduction Brezilien
 
 ```
 
