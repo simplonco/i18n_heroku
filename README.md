@@ -1,5 +1,5 @@
-README
-=========
+README [![Build Status](https://travis-ci.org/simplonco/rails-i18n-heroku.svg?branch=master)](https://travis-ci.org/simplonco/rails-i18n-heroku)
+======
 
 ##[Ruby on Rails App on Heroku](https://i18n-heroku-app.herokuapp.com/)
 ---
